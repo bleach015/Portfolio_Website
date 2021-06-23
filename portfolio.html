@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Portfolio</title>
         <meta charset="utf-8">
@@ -9,7 +9,81 @@
         <script src="js/uikit-icons.min.js"></script>
     </head>
     <body>
-        <h1>Heading</h1>
-        <p>Paragraph</p>
+        <!--Web header-->
+        <div id="bg1">
+            <b>
+            <h1 id="pf_header" class="uk-heading-hero">PORTFOLIO</h1>
+            </b>
+            <p id="pf_header" class="uk-text-lead">Pathompong Subtechitmanee</p>
+            <p>Faculty of Information Technology</p>
+            <p>Major in Business Information Technology (International)</p>
+            <p>King Mongkut's Institute of Technology Ladkrabang</p>
+            <div></div>
+        </div>
+
+        <!-- NAVBAR -->
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+            <nav class="uk-navbar-container" id="nav_bar" uk-navbar style="position: relative; z-index: 980;">
+                <div class="uk-navbar-left">
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                    <div>
+                        <ul class="uk-navbar-nav">
+                        <li><a href="#bg1" uk-icon="home" uk-scroll class="under"></a></li>
+                        </ul>
+                    </div>
+                    <li>
+                        <a class="under">PROFILE</a>
+                    </li>
+                    <li>
+                        <a href="#address" uk-scroll class="under">ADDRESS</a>
+                    </li>
+                    <li>
+                        <a href="#subject" uk-scroll class="under">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="#subject" uk-scroll class="under">EDUCATION</a>
+                    </li>
+                    <li>
+                        <a href="#subj_table" uk-scroll class="under">PROJECTS ACCOMPLISHMENT</a>
+                    </li>
+                    <!--<li><a href="#q_and_a" uk-scroll class="under">COMMENTS FROM SENIOR STUDENTS</a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Profile-->
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+            <img src="pic/my-pic.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div class="divide_div" id="profile" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+            <div>
+                <h1 class="uk-heading-bullet content">Personal Profile</h1>
+                <p class="content font_size"><b>Name: </b>Pathompong Subtechitmanee <br> <b>Nick Name: </b>
+                Pop <br> <b>Birth Date: </b> 12 August 1998 <br> <b>Nationality: </b> Thai
+                </p>
+            </div>
+        </div>
+        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+            <img src="pic/my-pic.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        
+        <!--Address-->
+        <div id="address" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+            <div class="divide_div">
+                <h1 class="uk-heading-bullet content">Address</h1>
+                <p class="content font_size">128/163 P.S.T. City, Home Nonsi 14, Nonsi Road,<br> Chongnonsi, 
+                    Yannawa, Bangkok, Thailand, 10120</p>
+            </div>
+        </div>
+
+        <!--Contact-->
+
+        <!--Education-->
     </body>
 </html>
