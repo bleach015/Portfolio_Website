@@ -5,24 +5,53 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.min.css" />
+        <link rel="stylesheet" href="css/timeline.css" />
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
+        <script src="https://kit.fontawesome.com/87dd078cee.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+        #profile {
+            padding-top: 3%;
+        }
+
+        #nav_bar{
+            background-color: rgb(240, 240, 240);
+        }
+        
+        #bg1 {
+            /*background-image: url("pic/menu.jpg");*/
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 22.8%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #dot_nav {
+            padding-left:20%;
+        }
+
+    </style>
     <body>
         <!--Web header-->
         <div id="bg1">
             <b>
-            <h1 id="pf_header" class="uk-heading-hero">PORTFOLIO</h1>
+            <h1 id="pf_header" class="uk-heading-hero uk-text-center">PORTFOLIO</h1>
             </b>
-            <p id="pf_header" class="uk-text-lead">Pathompong Subtechitmanee</p>
-            <p>Faculty of Information Technology</p>
-            <p>Major in Business Information Technology (International)</p>
-            <p>King Mongkut's Institute of Technology Ladkrabang</p>
-            <div></div>
+            <p class="uk-text-lead uk-text-center">Pathompong Subtechitmanee</p>
+            <p class="uk-text-center">Faculty of Information Technology</p>
+            <p class="uk-text-center">Major in Business Information Technology (International)</p>
+            <p class="uk-text-center">King Mongkut's Institute of Technology Ladkrabang</p>
         </div>
 
         <!-- NAVBAR -->
-        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <nav class="uk-navbar-container" id="nav_bar" uk-navbar style="position: relative; z-index: 980;">
                 <div class="uk-navbar-left">
                 </div>
@@ -34,7 +63,7 @@
                         </ul>
                     </div>
                     <li>
-                        <a class="under">PROFILE</a>
+                        <a href="#profile" uk-scroll class="under">PROFILE</a>
                     </li>
                     <li>
                         <a href="#address" uk-scroll class="under">ADDRESS</a>
@@ -52,47 +81,144 @@
         </div>
 
         <!--Profile-->
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
-            <div class="uk-card-media-left uk-cover-container">
-            <img src="pic/my-pic.jpg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div class="divide_div" id="profile" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
-            <div>
-                <h1 class="uk-heading-bullet content">Personal Profile</h1>
-                <p class="content font_size"><b>Name: </b>Pathompong Subtechitmanee <br> <b>Nick Name: </b>
-                Pop <br> <b>Birth Date: </b> 12 August 1998 <br> <b>Nationality: </b> Thai
-                </p>
-            </div>
-            <div class="divide_div">
-                <h1 class="uk-heading-bullet content">Address</h1>
-                <p class="content font_size">128/163 P.S.T. City, Home Nonsi 14, Nonsi Road,<br> Chongnonsi, 
-                    Yannawa, Bangkok, Thailand, 10120</p>
-            </div>
-        </div>
-        <!--<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-            <img src="pic/my-pic.jpg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div> -->
-        
-        <!--Address
-        <div id="address" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
-            <div class="divide_div">
-                <h1 class="uk-heading-bullet content">Address</h1>
-                <p class="content font_size">128/163 P.S.T. City, Home Nonsi 14, Nonsi Road,<br> Chongnonsi, 
-                    Yannawa, Bangkok, Thailand, 10120</p>
-            </div>
+        <div>
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
+                <div class="uk-card-media-left uk-cover-container">
+                    <img src="pic/my-pic.jpg" alt="" uk-cover>
+                    <canvas width="600" height="400"></canvas>
+                </div>
+                <div class="divide_div" id="profile" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+                    <div>
+                        <h1 class="uk-heading-bullet content1">Personal Profile</h1>
+                        <p class="content1 font_size"><b>Name: </b>Pathompong Subtechitmanee <br> <b>Nick Name: </b>
+                        Pop <br> <b>Birth Date: </b> 12 August 1998 <br> <b>Nationality: </b> Thai
+                        </p>
 
-            <--Contact--
-            <div id="address" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;"></div>
-                <div class="divide_div">
-                    <h1 class="uk-heading-bullet content">Contact</h1>
-                    <p class="content font_size">128/163 P.S.T. City, Home Nonsi 14, Nonsi Road,<br> Chongnonsi, 
-                        Yannawa, Bangkok, Thailand, 10120</p>
+                <!--Address-->
+                
+                        <h1 class="uk-heading-bullet content1" id="address">Address</h1>
+                        <p class="content1 font_size">128/163 P.S.T. City, Home Nonsi 14, Nonsi Road,<br> Chongnonsi, 
+                            Yannawa, Bangkok, Thailand, 10120</p>
+                    </div>
                 </div>
             </div>
-        </div>-->
+        
+            <!--Education Timeline-->
+            <div id="education">
+                <div class="uk-margin-top uk-align-center@${0|s,m,l,xl|}">
+                    <h1 class="uk-heading-line uk-text-center"><span>Education</span></h1>
+                </div>
+            </div>
+        </div>
 
-        <!--Education-->
+        <div class="timeline">
+            <div class="container left">
+              <div class="educations">Primary School</div>
+              <i class="icon fas fa-baby"></i>
+              <div class="content">
+                <h2>Phra Mae Maree Sathorn School</h2>
+                <p>
+                  Grade 1<sup>st</sup> - 3<sup>rd</sup>: Thai Program <br> 
+                  Grade 4<sup>th</sup> - 6<sup>th</sup>: English Program
+                </p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="educations">Secondary School</div>
+              <i class="icon fas fa-child"></i>
+              <div class="content">
+                <h2>Suankularb Wittayalai School</h2>
+                <p>
+                  Grade 7<sup>th</sup> - 9<sup>th</sup>: Normal Program <br>
+                  Grade 10<sup>th</sup> - 12<sup>th</sup>: Arts-Math Program
+                </p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="educations" id="university">University</div>
+              <i class="icon fas fa-user-graduate"></i>
+              <div class="content">
+                <h2>King Mongkut's Institute of Technology Ladkrabang</h2>
+                <p>
+                  Faculty of Information Technology <br>
+                  Business Information Technology &nbsp; &nbsp; &nbsp; GPA: 3.33
+                </p>
+              </div>
+            </div>
+        </div>
+
+        <!--About the BIT major-->
+
+        <div id="major_describe">
+            <h1>About Business Information Technology Major</h1>
+            <p>The course is divided into two side between businees and IT (mostly businees classes). 
+                So, this major does not focuses on the programming side as much as normal IT major does.
+                Because of that, the programming languages and frameworks I know is quite a few.</p>
+        </div>
+
+        <!--Projects Accomplishment-->
+        
+        <div>
+            <h1>Project Accomplishment</h1>
+        </div>
+
+        <div>
+            <div class="uk-card uk-card-default uk-child-width-1-2@s" uk-grid>
+                
+                    <div class="uk-card-media-right uk-cover-container">
+                        <div id="how_differ" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                            <div class="divide_div">
+                              <h1 class="uk-heading-bullet content">Dreadline</h1>
+                              <p class="content font_size">This is a pair project from Computer Programming class.
+                                The project is an offline turn-based game which 2 players swicth and attack each other until the one side's selected 3 characters are dead.
+                                The game create with Python using Pygame.
+                              </p>
+                            </div>
+                          </div>
+                    </div>
+                    
+            <div uk-slideshow="animation: push; autoplay: true; autoplay-interval: 3000; pause-on-hover: true;">
+                
+                <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1">
+                    
+                        <ul class="uk-slideshow-items ">
+                            <li>
+                                <img src="pic/menu.jpg" alt="game-menu" uk-cover>
+                            </li>
+                            <li>
+                                <img src="pic/guide.jpg" alt="guide" uk-cover>
+                            </li>
+                            <li>
+                                <img src="pic/char_select.jpg" alt="character-selection" uk-cover>
+                            </li>
+                            <li>
+                                <img src="pic/battle.jpg" alt="battle" uk-cover>
+                            </li>
+                            <li>
+                                <img src="pic/fight.jpg" alt="fight-scene" uk-cover>
+                            </li>
+                        </ul>
+                
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                        
+                    </div>
+                    
+                </div>
+                
+                </div>
+            
+                <ul class="uk-slideshow-nav uk-dotnav uk-flex-left uk-margin" id="dot_nav"></ul>
+
+                <div uk-scrollspy="cls: uk-animation-fade; delay: 100;">
+                    <h1 class="white pad_left uk-heading-bullet content">xxxxx</h1>
+                    <p class="white pad_left font_size">xxxxxxx</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!--https://www.it.kmitl.ac.th/~it60070172/final_project/-->
+
     </body>
 </html>
