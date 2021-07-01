@@ -6,50 +6,108 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.min.css" />
         <link rel="stylesheet" href="css/timeline.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
         <script src="https://kit.fontawesome.com/87dd078cee.js" crossorigin="anonymous"></script>
     </head>
     <style>
+        .divide_div {
+            color: rgb(160, 160, 160);
+        }
+
         #profile {
             padding-top: 3%;
         }
 
-        #nav_bar{
+        #major_bg {
+            margin-top: 2%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left: 5%;
             background-color: rgb(240, 240, 240);
         }
+
+        #dreadline {
+            padding-top: 15%;
+            padding-left: 5%;
+        }
+
+        #nav_bar{
+            background-color: rgb(224, 224, 224);
+        }
+
+        nav a{
+            color: black !important;
+        }
+
+        nav a.under:hover{
+            border-bottom: 3px solid goldenrod;
+        }
+
+        nav a:active{
+            border-bottom: 3px solid goldenrod;
+        }
         
-        #bg1 {
-            /*background-image: url("pic/menu.jpg");*/
-            background-repeat: no-repeat;
-            position: relative;
-            padding: 22.8%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+        #port-bg {
+            padding-top: 10%;
+            padding-bottom: 10%;
         }
 
         #dot_nav {
             padding-left:20%;
         }
 
+        #proj_acc {
+            margin-top: 2%;
+        }
+
+        #web_proj {
+            padding-top: 5%;
+            padding-left: 5%;
+            padding-bottom: 5%;
+            background-color: rgb(240, 240, 240);
+        }
+
+        #mobile_app {
+            padding-top: 12%;
+            padding-left: 5%;
+        }
+
+        #vb_proj {
+            padding-top: 7%;
+            padding-left: 5%;
+            background-color: rgb(240, 240, 240)
+        }
+
+        #senior_proj {
+            padding-top: 5%;
+            padding-left: 5%;
+            padding-bottom: 10%;
+        }
+
+        #test-filter {
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
     <body>
         <!--Web header-->
-        <div id="bg1">
-            <b>
-            <h1 id="pf_header" class="uk-heading-hero uk-text-center">PORTFOLIO</h1>
-            </b>
-            <p class="uk-text-lead uk-text-center">Pathompong Subtechitmanee</p>
-            <p class="uk-text-center">Faculty of Information Technology</p>
-            <p class="uk-text-center">Major in Business Information Technology (International)</p>
-            <p class="uk-text-center">King Mongkut's Institute of Technology Ladkrabang</p>
+        <div id="test-filter" class="uk-height-large uk-background-cover uk-overflow-hidden uk-flex uk-flex-top" uk-parallax="sepia: 100;" style="background-image: url('pic/portfolio-background.jpg');">
+            <div id="port-bg" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-filter; blur: 0,10;">
+                <b>
+                <h1 id="pf_header" class="uk-heading-hero uk-text-center" style="color: whitesmoke;">PORTFOLIO</h1>
+                </b>
+                <p class="uk-text-lead uk-text-center" style="color: whitesmoke;">Pathompong Subtechitmanee</p>
+                <p class="uk-text-center" style="color: whitesmoke;">Faculty of Information Technology</p>
+                <p class="uk-text-center" style="color: whitesmoke;">Major in Business Information Technology (International)</p>
+                <p class="uk-text-center" style="color: whitesmoke;">King Mongkut's Institute of Technology Ladkrabang</p>
+            </div>
         </div>
-
         <!-- NAVBAR -->
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <nav class="uk-navbar-container" id="nav_bar" uk-navbar style="position: relative; z-index: 980;">
@@ -59,7 +117,7 @@
                     <ul class="uk-navbar-nav">
                     <div>
                         <ul class="uk-navbar-nav">
-                        <li><a href="#bg1" uk-icon="home" uk-scroll class="under"></a></li>
+                        <li><a href="#port-bg" uk-icon="home" uk-scroll class="under"></a></li>
                         </ul>
                     </div>
                     <li>
@@ -69,13 +127,27 @@
                         <a href="#address" uk-scroll class="under">ADDRESS</a>
                     </li>
                     <li>
-                        <a href="#contact" uk-scroll class="under">CONTACT</a>
-                    </li>
-                    <li>
                         <a href="#education" uk-scroll class="under">EDUCATION</a>
                     </li>
                     <li>
                         <a href="#proj_acc" uk-scroll class="under">PROJECTS ACCOMPLISHMENT</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                              <li><a href="#dreadline" uk-scroll class="under">Dreadline</a></li>
+                              <li class="uk-nav-divider"></li>
+                              <li><a href="#web_proj" uk-scroll class="under">Software Engineer Branch Promotion Website</a></li>
+                              <li class="uk-nav-divider"></li>
+                              <li><a href="#mobile_app" uk-scroll class="under">What Should I Eat?</a></li>
+                              <li class="uk-nav-divider"></li>
+                              <li><a href="#vb_proj" uk-scroll class="under">Coffe Shop POS</a></li>
+                              <li class="uk-nav-divider"></li>
+                              <li><a href="#senior_proj" uk-scroll class="under">SortOut</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#contact" uk-scroll class="under">CONTACT</a>
+                    </li>
                 </div>
             </nav>
         </div>
@@ -85,7 +157,6 @@
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
                 <div class="uk-card-media-left uk-cover-container">
                     <img src="pic/my-pic.jpg" alt="" uk-cover>
-                    <canvas width="600" height="400"></canvas>
                 </div>
                 <div class="divide_div" id="profile" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
                     <div>
@@ -148,39 +219,40 @@
         </div>
 
         <!--About the BIT major-->
-
-        <div id="major_describe">
-            <h1>About Business Information Technology Major</h1>
-            <p>The course is divided into two side between businees and IT (mostly businees classes). 
-                So, this major does not focuses on the programming side as much as normal IT major does.
-                Because of that, the programming languages and frameworks I know is quite a few.</p>
+        <div id="major_bg">
+            <div id="major_describe">
+                <h1>About Business Information Technology Major</h1>
+                <p>The course is divided into two side between business and IT (half in business and half in IT). 
+                    So, this major does not focuses on the programming side as much as normal IT major does.
+                    Because of that, the programming languages and frameworks I know is quite a few.</p>
+            </div>
         </div>
 
         <!--Projects Accomplishment-->
         
-        <div>
-            <h1>Project Accomplishment</h1>
+        <div id="proj_acc">
+            <h1 class="uk-heading-line uk-text-center"><span>Project Accomplishments</span></h1>
         </div>
 
         <div>
             <div class="uk-card uk-card-default uk-child-width-1-2@s" uk-grid>
                 
-                    <div class="uk-card-media-right uk-cover-container">
-                        <div id="how_differ" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
-                            <div class="divide_div">
-                              <h1 class="uk-heading-bullet content">Dreadline</h1>
-                              <p class="content font_size">This is a pair project from Computer Programming class.
-                                The project is an offline turn-based game which 2 players swicth and attack each other until the one side's selected 3 characters are dead.
-                                The game create with Python using Pygame.
-                              </p>
-                            </div>
-                          </div>
-                    </div>
+                <div class="uk-card-media-right uk-cover-container">
                     
-            <div uk-slideshow="animation: push; autoplay: true; autoplay-interval: 3000; pause-on-hover: true;">
-                
-                <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1">
+                        <div class="divide_div" id="dreadline" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                            <h1 class="uk-heading-bullet content">Dreadline</h1>
+                            <p class="content font_size">This is a pair project from Computer Programming class.
+                            The project is an offline turn-based game which 2 players swicth and attack each other until the one side's selected 3 characters are dead.
+                            The game was created with Python using Pygame.
+                            </p>
+                        </div>
+                        
+                </div>
                     
+                <div uk-slideshow="animation: push; autoplay: true; autoplay-interval: 3000; pause-on-hover: true;">
+                    
+                    <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1">
+                        
                         <ul class="uk-slideshow-items ">
                             <li>
                                 <img src="pic/menu.jpg" alt="game-menu" uk-cover>
@@ -203,22 +275,159 @@
                         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
                         
                     </div>
+                        
+                </div>
+
+                <div class="uk-card-media-left uk-cover-container">
+                    <a href="https://www.it.kmitl.ac.th/~it60070172/final_project/" target="blank">
+                        <img src="pic/se_web_project.jpg" alt="" uk-cover>
+                    </a>
+                </div>
+                <div class="divide_div" id="web_proj" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+                    <h1 class="uk-heading-bullet content">Software Engineer Branch Promotion Website</h1>
+                    <p class="content font_size">This is a group (3 people) project from Web and Multimedia class.
+                        The website is used to promote the Software Engineer branch of Information Technology major.
+                        This website was created by HTML5, CSS, and Javascript.
+                        <a href="https://www.it.kmitl.ac.th/~it60070172/final_project/" target="blank">
+                            <b> Click here or click at the left picture to visit the website. </b>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="uk-card-media-right uk-cover-container">
+                    
+                    <div class="divide_div" id="mobile_app" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                        <h1 class="uk-heading-bullet content">What Should I Eat?</h1>
+                        <p class="content font_size">This is a pair project from Mobile Application class.
+                        The project is an iOS application which will help you when you cannot think about what to eat and where to eat in each meal.
+                        The application can detect your location and find you nearby restaurants. However the food and restaurant randoming are separate and not related to each other.
+                        <br> This application was created using Swift language.
+                        </p>
+                    </div>
                     
                 </div>
                 
-                </div>
-            
-                <ul class="uk-slideshow-nav uk-dotnav uk-flex-left uk-margin" id="dot_nav"></ul>
+            <div>
+                <video src="video/WhatShouldIEat-Promotional-Video.mp4" controls muted playsinline uk-video="autoplay: inview"></video>
+            </div>
 
-                <div uk-scrollspy="cls: uk-animation-fade; delay: 100;">
-                    <h1 class="white pad_left uk-heading-bullet content">xxxxx</h1>
-                    <p class="white pad_left font_size">xxxxxxx</p>
+            <div class="uk-card-media-left uk-cover-container">
+                <div uk-slideshow="animation: push; autoplay: true; autoplay-interval: 3000; pause-on-hover: true;">
+                    
+                    <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1">
+                        
+                        <ul class="uk-slideshow-items ">
+                            <li>
+                                <img src="pic/main-menu.jpg" alt="main-menu" uk-cover>
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                    <h3 class="uk-margin-remove">Main menu</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="pic/cashier.jpg" alt="cashier-window" uk-cover>
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                    <h3 class="uk-margin-remove">Cashier window</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="pic/buy.jpg" alt="buy" uk-cover>
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                    <h3 class="uk-margin-remove">Calculate buy items</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="pic/customize-menu.jpg" alt="add-menu-window" uk-cover>
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                    <h3 class="uk-margin-remove">Add item window</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="pic/customize-menu-2.jpg" alt="add-mennu" uk-cover>
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                                    <h3 class="uk-margin-remove">Add item</h3>
+                                </div>
+                            </li>
+                        </ul>
+                
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                        
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="divide_div" id="vb_proj" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+                <h1 class="uk-heading-bullet content">Coffe Shop POS</h1>
+                <p class="content font_size">This is a pair project from Visual Basic class.
+                    <br>The project is a Point of Sale software for coffee shop. It may adjust to another kinds of shop.
+                    <br>The project was created using Visual Basic.
+                </p>
+            </div>
+
+            <div class="uk-card-media-right uk-cover-container">
+                    
+                <div class="divide_div" id="senior_proj" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                    <h1 class="uk-heading-bullet content">SortOut</h1>
+                    <p class="content font_size">This is a senior project working in duo.<br>
+                        SortOut is an education game based iOS application developed using Swift.<br>
+                        It use the technique of remembering vocabulary using sentence arrangements. <br>
+                        It will randomize some words and what you need to do is arranging them into a meaningful sentence.
+                        If the sentence is long and correct you get 3 stars, otherwise you get 2 stars, 1 star, and 0 star.
+                        It also has a built-in dictionary which will show only the randomized word if you not sure what they mean.
+                        You can add words in the dictionary to the vocab list for later memorization.<br>
+                        The application uses Natural Language Processing to detect lemmatization and use GoogleML for in-device text translation (offline).<br>
+                        The application was developed using Swift language.
+                    </p>
                 </div>
                 
             </div>
+            
+        <div>
+            <iframe src="https://www.youtube-nocookie.com/embed/HZAP31ftuQQ?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true"></iframe>
         </div>
-        
-        <!--https://www.it.kmitl.ac.th/~it60070172/final_project/-->
+                
+            </div>
+              
+        </div>
+
+        <!-- FOOTER-->
+        <div class="uk-section uk-section-secondary" id="contact">
+            <div class="uk-container">
+            <div class="uk-child-width-expand" uk-grid>
+                <div class="uk-panel" align="center">
+                <h3>Contact</h3>
+                </div>
+                <div class="uk-panel">
+
+                <p>
+                    <span uk-icon="icon: location"></span>
+                    128/163 P.S.T. City Home, Nonsi 14, Nonsi Road, Chongnonsi, Yannawa, Bangkok 10120
+                </p>
+                
+                <p>
+                    <span uk-icon="icon: receiver"></span>
+                    (+66)92 280 6636<br>
+                </p>
+
+                </div>
+                <br>
+
+                <div class="uk-panel">
+                <ul class="uk-list uk-link-text">
+                    <li>
+                    <a href="https://www.facebook.com/ITLadkrabang/?ref=ts&fref=ts" target="_blank"><span uk-icon="facebook"></span>&nbsp; Facebook</a>
+                    </li>
+                    <li>
+                    <a href="https://www.linkedin.com/in/pathompong-subtechitmanee-750057196/" target="_blank"><span uk-icon="linkedin"></span>&nbsp; linkedin</a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com/bleach015/" target="_blank"><span uk-icon="github"></span>&nbsp; github</a>
+                        </li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
 
     </body>
 </html>
