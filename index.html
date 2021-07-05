@@ -19,6 +19,13 @@
             color: rgb(160, 160, 160);
         }
 
+        img {
+            float: left;
+            /*width:  150px;*/
+            height: 150px;
+            object-fit: cover;
+        }
+
         #profile {
             padding-top: 3%;
         }
@@ -61,6 +68,24 @@
             padding-left:20%;
         }
 
+        #skills {
+            margin-top: 2%;
+        }
+
+        #programming_lang {
+            padding-left: 5%;
+        }
+
+        #lang {
+            padding-top: 5%;
+            padding-left: 5%;
+        }
+
+        #soft-skills {
+            padding-top: 5%;
+            padding-left: 5%;
+        }
+
         #proj_acc {
             margin-top: 2%;
         }
@@ -93,6 +118,15 @@
             width: 100%;
             height: 100%;
         }
+        
+        #test_score {
+            padding-top: 5%;
+        }
+
+        #toeic-front {
+            padding-top: 20%;
+            padding-bottom: 20%;
+        }
 
     </style>
     <body>
@@ -100,9 +134,8 @@
         <div id="test-filter" class="uk-height-large uk-background-cover uk-overflow-hidden uk-flex uk-flex-top" uk-parallax="sepia: 100;" style="background-image: url('pic/portfolio-background.jpg');">
             <div id="port-bg" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-filter; blur: 0,10;">
                 <b>
-                <h1 id="pf_header" class="uk-heading-hero uk-text-center" style="color: whitesmoke;">PORTFOLIO</h1>
+                <h1 id="pf_header" class="uk-heading-hero uk-text-center" style="color: whitesmoke;">Pathompong Subtechitmanee</h1>
                 </b>
-                <p class="uk-text-lead uk-text-center" style="color: whitesmoke;">Pathompong Subtechitmanee</p>
                 <p class="uk-text-center" style="color: whitesmoke;">Faculty of Information Technology</p>
                 <p class="uk-text-center" style="color: whitesmoke;">Major in Business Information Technology (International)</p>
                 <p class="uk-text-center" style="color: whitesmoke;">King Mongkut's Institute of Technology Ladkrabang</p>
@@ -146,6 +179,12 @@
                         </div>
                     </li>
                     <li>
+                        <a href="#skills" uk-scroll class="under">SKILLS</a>
+                    </li>
+                    <li>
+                        <a href="#test_score" uk-scroll class="under">STANDARDIZED TEST</a>
+                    </li>
+                    <li>
                         <a href="#contact" uk-scroll class="under">CONTACT</a>
                     </li>
                 </div>
@@ -158,7 +197,7 @@
                 <div class="uk-card-media-left uk-cover-container">
                     <img src="pic/my-pic.jpg" alt="" uk-cover>
                 </div>
-                <div class="divide_div" id="profile" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+                <div class="divide_div" id="profile" uk-scrollspy="cls: uk-animation-slide-right; delay: 200; repeat: true;">
                     <div>
                         <h1 class="uk-heading-bullet content1">Personal Profile</h1>
                         <p class="content1 font_size"><b>Name: </b>Pathompong Subtechitmanee <br> <b>Nick Name: </b>
@@ -229,7 +268,6 @@
         </div>
 
         <!--Projects Accomplishment-->
-        
         <div id="proj_acc">
             <h1 class="uk-heading-line uk-text-center"><span>Project Accomplishments</span></h1>
         </div>
@@ -239,11 +277,11 @@
                 
                 <div class="uk-card-media-right uk-cover-container">
                     
-                        <div class="divide_div" id="dreadline" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                        <div class="divide_div" id="dreadline" uk-scrollspy="cls: uk-animation-slide-left; delay: 200; repeat: true;">
                             <h1 class="uk-heading-bullet content">Dreadline</h1>
                             <p class="content font_size">This is a pair project from Computer Programming class.
                             The project is an offline turn-based game which 2 players swicth and attack each other until the one side's selected 3 characters are dead.
-                            The game was created with Python using Pygame.
+                            The game was created with Python 3 using Pygame.
                             </p>
                         </div>
                         
@@ -283,7 +321,7 @@
                         <img src="pic/se_web_project.jpg" alt="" uk-cover>
                     </a>
                 </div>
-                <div class="divide_div" id="web_proj" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+                <div class="divide_div" id="web_proj" uk-scrollspy="cls: uk-animation-slide-right; delay: 200; repeat: true;">
                     <h1 class="uk-heading-bullet content">Software Engineer Branch Promotion Website</h1>
                     <p class="content font_size">This is a group (3 people) project from Web and Multimedia class.
                         The website is used to promote the Software Engineer branch of Information Technology major.
@@ -296,12 +334,12 @@
 
                 <div class="uk-card-media-right uk-cover-container">
                     
-                    <div class="divide_div" id="mobile_app" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                    <div class="divide_div" id="mobile_app" uk-scrollspy="cls: uk-animation-slide-left; delay: 200; repeat: true;">
                         <h1 class="uk-heading-bullet content">What Should I Eat?</h1>
                         <p class="content font_size">This is a pair project from Mobile Application class.
                         The project is an iOS application which will help you when you cannot think about what to eat and where to eat in each meal.
                         The application can detect your location and find you nearby restaurants. However the food and restaurant randoming are separate and not related to each other.
-                        <br> This application was created using Swift language.
+                        <br> This application was created using Swift 5.
                         </p>
                     </div>
                     
@@ -356,7 +394,7 @@
                         
                 </div>
             </div>
-            <div class="divide_div" id="vb_proj" uk-scrollspy="cls: uk-animation-slide-right; delay: 200;">
+            <div class="divide_div" id="vb_proj" uk-scrollspy="cls: uk-animation-slide-right; delay: 200; repeat: true;">
                 <h1 class="uk-heading-bullet content">Coffe Shop POS</h1>
                 <p class="content font_size">This is a pair project from Visual Basic class.
                     <br>The project is a Point of Sale software for coffee shop. It may adjust to another kinds of shop.
@@ -366,7 +404,7 @@
 
             <div class="uk-card-media-right uk-cover-container">
                     
-                <div class="divide_div" id="senior_proj" uk-scrollspy="cls: uk-animation-slide-left; delay: 200;">
+                <div class="divide_div" id="senior_proj" uk-scrollspy="cls: uk-animation-slide-left; delay: 200; repeat: true;">
                     <h1 class="uk-heading-bullet content">SortOut</h1>
                     <p class="content font_size">This is a senior project working in duo.<br>
                         SortOut is an education game based iOS application developed using Swift.<br>
@@ -376,7 +414,7 @@
                         It also has a built-in dictionary which will show only the randomized word if you not sure what they mean.
                         You can add words in the dictionary to the vocab list for later memorization.<br>
                         The application uses Natural Language Processing to detect lemmatization and use GoogleML for in-device text translation (offline).<br>
-                        The application was developed using Swift language.
+                        The application was developed using Swift 5.
                     </p>
                 </div>
                 
@@ -389,6 +427,164 @@
             </div>
               
         </div>
+
+        <!--Skills-->
+        <div id="skills">
+            <h1 class="uk-heading-line uk-text-center"><span>Skills</span></h1>
+        </div>
+
+        <div class="divide_div" id="programming_lang">
+            <h2 class="uk-heading-bullet">Programming Languages</h2>
+            <h3>Intermediate:</h3>
+
+            <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-collapse uk-grid-small" uk-grid uk-overflow-auto>
+                
+                <div class="uk-text-center skills_pic">
+                  <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                    <img src="pic/swift-logo.png" alt="swift-logo">
+                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                      <p class="uk-h1 uk-margin-remove">Swift 5</p>
+                    </div>
+                  </div>
+                  <p>2 years</p>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/html-logo.png" alt="HTML-logo">
+                      <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                        <p class="uk-h1 uk-margin-remove">HTML 5</p>
+                      </div>
+                    </div>
+                    <p>1 year</p>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/css-logo.png" alt="css-logo">
+                      <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                        <p class="uk-h1 uk-margin-remove">CSS 3</p>
+                      </div>
+                    </div>
+                    <p>1 year</p>
+                </div>
+
+            </div>
+
+            <h3>Beginner:</h3>
+
+            <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-collapse uk-grid-small" uk-grid uk-overflow-auto>
+                
+                <div class="uk-text-center skills_pic">
+                  <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                    <img src="pic/py-logo.png" alt="py-logo" width="200px">
+                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                      <p class="uk-h1 uk-margin-remove">Python 3</p>
+                    </div>
+                  </div>
+                  <p>1 year</p>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/sql-logo.png" alt="sql-logo">
+                      <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                        <p class="uk-h1 uk-margin-remove">SQL</p>
+                      </div>
+                    </div>
+                    <p>1 year</p>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/vb-logo.jpg" alt="vb-logo">
+                      <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                        <p class="uk-h1 uk-margin-remove">Visual Basic</p>
+                      </div>
+                    </div>
+                    <p>1 year</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divide_div" id="lang">
+            <h2 class="uk-heading-bullet">Languages</h2>
+
+            <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-collapse uk-grid-small" uk-grid uk-overflow-auto>
+                
+                <div class="uk-text-center skills_pic">
+                    <h3>Native:</h3>
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                        <img src="pic/thai-flag.svg" alt="th-flag">
+                        <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                            <p class="uk-h1 uk-margin-remove">Thai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <h3>Intermediate:</h3>
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/uk-flag.png" alt="uk-flag">
+                      <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                        <p class="uk-h1 uk-margin-remove">English</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <h3>Beginner:</h3>
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/jp-flag.png" alt="jp-flag">
+                      <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                        <p class="uk-h1 uk-margin-remove">にほんご</p>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="divide_div" id="soft-skills">
+            <h2 class="uk-heading-bullet">Soft Skills</h2>
+
+            <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-collapse uk-grid-small" uk-grid uk-overflow-auto>
+                
+                <div class="uk-text-center skills_pic">
+                    <h3>Collaborative</h3>
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                        <img src="pic/colab-icon.png" alt="colab-icon">
+                    </div>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <h3>Hard-working</h3>
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/hard-working-icon.png" alt="hard-working-icon">
+                    </div>
+                    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                </div>
+
+                <div class="uk-text-center skills_pic">
+                    <h3>Good listener</h3>
+                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                      <img src="pic/good-listener-icon.png" alt="good-listener-icon">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <!--Standardized Test-->
+        <div id="test_score">
+            <h1 class="uk-heading-line uk-text-center"><span>Standardized Test Result</span></h1>
+        </div>
+
+        <div class="uk-height-large uk-background-cover" id="toeic-front" style="background-image: url('pic/Inkedtoeic-front_LI.jpg');"></div>
+
+        
 
         <!-- FOOTER-->
         <div class="uk-section uk-section-secondary" id="contact">
