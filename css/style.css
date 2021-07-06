@@ -1,9 +1,18 @@
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'PT Serif', serif;
 }
 
 h1 {
+    font-family: 'PT Serif', serif;
     color: rgb(126, 126, 126);
+}
+
+h2 {
+    font-family: 'PT Serif', serif;
+}
+
+h3 {
+    font-family: 'PT Serif', serif;
 }
 
 .divide_div {
